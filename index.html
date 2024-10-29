@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Point Counter System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <div id="teamNamePage" class="page active">
+            <h1>Enter Team Names</h1>
+            <div class="team-input-container">
+                <div class="team-input">
+                    <label for="team1Name">Team 1 Name:</label>
+                    <input type="text" id="team1Name" class="name-input" placeholder="Enter Team 1 Name">
+                </div>
+                <div class="team-input">
+                    <label for="team2Name">Team 2 Name:</label>
+                    <input type="text" id="team2Name" class="name-input" placeholder="Enter Team 2 Name">
+                </div>
+            </div>
+            <button id="teamNameNext" class="next-button" disabled>Next</button>
+        </div>
+
+        <div id="warmupPage" class="page">
+            <h1>Select Warm-up Points</h1>
+            <div class="options">
+                <button class="option-button" data-value="3">3 Points</button>
+                <button class="option-button" data-value="5">5 Points</button>
+                <button class="option-button" data-value="7">7 Points</button>
+            </div>
+            <button id="warmupNext" class="next-button" disabled>Next</button>
+        </div>
+
+        <div id="gamePage" class="page">
+            <h1>Select Game Points</h1>
+            <div class="options">
+                <button class="option-button" data-value="10">10 Points</button>
+                <button class="option-button" data-value="15">15 Points</button>
+                <button class="option-button" data-value="21">21 Points</button>
+                <button class="option-button" data-value="30">30 Points</button>
+                <button class="option-button" data-value="50">50 Points</button>
+                <button class="option-button" data-value="100">100 Points</button>
+            </div>
+            <button id="gameNext" class="next-button" disabled>Next</button>
+        </div>
+
+        <div id="counterPage" class="page">
+            <h1>Point Counter</h1>
+            <div class="teams">
+                <div class="team">
+                    <h2 id="team1Title">Team 1</h2>
+                    <p id="team1Counter" class="counter">0</p>
+                    <button id="team1Add" class="option-button">Add Point</button>
+                </div>
+                <div class="team">
+                    <h2 id="team2Title">Team 2</h2>
+                    <p id="team2Counter" class="counter">0</p>
+                    <button id="team2Add" class="option-button">Add Point</button>
+                </div>
+            </div>
+            <button id="resetGame" class="next-button">Reset Game</button>
+        </div>
+
+        <div id="winNotification" class="win-notification">
+            <p id="winnerText"></p>
+            <button id="okButton" class="ok-button">OK</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
